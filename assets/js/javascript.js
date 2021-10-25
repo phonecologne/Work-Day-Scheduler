@@ -26,11 +26,11 @@ var events16 = JSON.parse(localStorage, getItem('hour16')) || "";
 var events17 = JSON.parse(localStorage.getItem('hour17')) || "";
 
 $.each(hours, function (index, value) {
-    events = [events9, events10, events11, events12, events 13, events14, events15, events16, events17]
+    events = [events9, events10, events11, events12, events13, events14, events15, events16, events17]
     $(".container").append("<div class='row'><div class='col-2 hour text-right' id='hour" +
-    (index + 9) + "'><span>" + value.format("h A") + "</span></div class='col-8 event-group' id='timeblock" + 
-    (index + 9) + "'><textarea class='events col-12' id='eventblock" + (index + 9) + events[index] + "</textarea></div>" +
-    "<div class='col-2 save-delete' id='save-delete" + (index + 9) + "'><i class='fas fa-save' title='Save Event'></i> <i class='fas fa-trash' title='Remove Event'></i></div></div></div>");
+        (index + 9) + "'><span>" + value.format("h A") + "</span></div class='col-8 event-group' id='timeblock" +
+        (index + 9) + "'><textarea class='events col-12' id='eventblock" + (index + 9) + events[index] + "</textarea></div>" +
+        "<div class='col-2 save-delete' id='save-delete" + (index + 9) + "'><i class='fas fa-save' title='Save Event'></i> <i class='fas fa-trash' title='Remove Event'></i></div></div></div>");
 });
 
 $("#currentDay").text(currentDay);
@@ -51,4 +51,28 @@ else {
 
 if (moment().isBetween(hour10, hour11)) {
     $("#timeblock10").addClass("present");
+}
+
+else if (moment().isAfter(hour11)) {
+    $("timeblock10").addClass("past");
+}
+else {
+    $("timeblock10").addClass("future");
+}
+
+if (moment().isBetween(hour11, hour12)) {
+    $("timeblock11"),addClass("present");
+}
+else if (moment().isAfter(hour12)) {
+    $("#timeblock11").addClass("past");
+}
+else {
+    $("timeblock11").addClass("future");
+}
+
+if (moment(). isBetween(hour12, hour13)) {
+    $("#timeblock12").addClass("present");
+}
+else if (moment().isAfter(hour13)) {
+    
 }
