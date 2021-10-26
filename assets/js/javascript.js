@@ -57,7 +57,7 @@ else if (moment().isAfter(hour11)) {
     $("#timeblock10").addClass("past");
 }
 else {
-    $(#timeblock10").addClass("future");
+    $("#timeblock10").addClass("future");
 }
 
 if (moment().isBetween(hour11, hour12)) {
@@ -128,6 +128,18 @@ else if (moment().isAfter(hour18)) {
 }
 else {
     $("#timeblock17").addClass("future");
-  };
+};
 }
 
+$("#save-delete9").on("click", "i.fa-trash", function () {
+    localStorage.removeItem("hour9");
+    $("eventblock9").val("");
+})
+$("#save-delete10").on("click", "i.fa-trash", function () {
+    localStorage.removeItem("hour10");
+    $("#eventblock10").val("");
+})
+$("save-delete11").on("click", "i-fa-trash", function () {
+    localStorage.removeItem("hour11");
+    $("eventblock11").val("");
+})
