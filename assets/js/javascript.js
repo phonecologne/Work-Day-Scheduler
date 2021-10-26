@@ -61,7 +61,7 @@ else {
 }
 
 if (moment().isBetween(hour11, hour12)) {
-    $("#timeblock11"),addClass("present");
+    $("#timeblock11"), addClass("present");
 }
 else if (moment().isAfter(hour12)) {
     $("#timeblock11").addClass("past");
@@ -70,7 +70,7 @@ else {
     $("#timeblock11").addClass("future");
 }
 
-if (moment(). isBetween(hour12, hour13)) {
+if (moment().isBetween(hour12, hour13)) {
     $("#timeblock12").addClass("present");
 }
 else if (moment().isAfter(hour13)) {
@@ -90,7 +90,7 @@ else {
     $("#timeblock13").addClass("future");
 }
 
-if (moment().isBetween(hour15,hour15)) {
+if (moment().isBetween(hour15, hour15)) {
     $("#timeblcok14").addClass("present");
 }
 else if (moment().isAfter(hour15)) {
@@ -116,3 +116,18 @@ if (moment().isBetween(hour16, hour17)) {
 else if (moment().isAfter(hour17)) {
     $("#timeblock16").addClass("past");
 }
+else {
+    $("#timeblock16").addClass("future");
+}
+
+if (moment().isBetween(hour17, hour18)) {
+    $("#timeblock17").addClass("present");
+}
+else if (moment().isAfter(hour18)) {
+    $("#timeblock17").addClass("past");
+}
+else {
+    $("#timeblock17").addClass("future");
+  };
+}
+
