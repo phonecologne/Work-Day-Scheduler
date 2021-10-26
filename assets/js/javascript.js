@@ -106,3 +106,10 @@ if (moment().isBetween(hour15, hour16)) {
 else if (moment().isAfter(hour16)) {
     $("timeblock15").addClass("past");
 }
+else {
+    $("timeblock15").addClass("future");
+}
+
+if (moment().isBetween(hour16, hour17)) {
+    $("#timeblock16").addClass("present");
+}
