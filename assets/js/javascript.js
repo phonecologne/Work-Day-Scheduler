@@ -143,3 +143,7 @@ $("save-delete11").on("click", "i-fa-trash", function () {
     localStorage.removeItem("hour11");
     $("eventblock11").val("");
 })
+$("save-delete12").on("click", "i.fa-trash", function () {
+    localStorage.removeItem("hour12");
+    $("eventblock12").val("");
+})
