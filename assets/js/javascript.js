@@ -155,7 +155,7 @@ $("save-delete14").on("click", "i-fa-trash", function () {
     localStorage.removeItem("hour14");
     $("eventblock14").val("");
 })
-$("#save-delete15").on("click", "i.fa-trash", function (){
+$("#save-delete15").on("click", "i.fa-trash", function () {
     localStorage.removeItem("hour15");
     $("eventblock15").val("");
 })
@@ -163,8 +163,32 @@ $("#save-delete16").on("click", "i.fa-trash", function () {
     localStorage.removeItem("hour16");
     $("eventblock16").val("");
 })
-$("save-delete17").on("click", "i.fa-trash", function (){
+$("save-delete17").on("click", "i.fa-trash", function () {
     localStorage.removeItem("hour17");
     $("eventblock17").val("");
 })
 
+$("#save-delete9").on("click", "i.fa-save", function () {
+    var event9 = $("#eventblock9").val().trim();
+    localStorage.setItem('hour9', JSON.stringify(event9));
+})
+$("save-delete10").on("click", "i.fa-save", function () {
+    var event10 = $("eventblock10").val().trim();
+    localStorage.setItem('hour10', JSON.stringify(event10));
+})
+$("$save-delete11").on("click", "i.fa-save", function () {
+    var event11 = $("eventblock11").val().trim();
+    localStorage.setItem('hour11',JSON.stringify(event11));
+})
+$("#save-delete12").on("click", "i.fa-save", function () {
+    var event12 = $("#eventblock12").val().trim();
+    localStorage.setItem('hour12', JSON.stringify(event12));
+})
+$("save-delete13").on("click", "i.fa-save", function () {
+    var event13 = $("eventblock13").val().trim();
+    localStorage.setItem('hour13', JSON.stringify(event13));
+})
+$("#save-delete14").on("click", "i.fa-save", function () {
+    var event14 = $("#eventblock14").val().trim();
+    localStorage.setItem('hour14', JSON.stringify(event14));
+})
