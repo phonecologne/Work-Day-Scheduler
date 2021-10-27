@@ -129,7 +129,7 @@ else if (moment().isAfter(hour18)) {
 else {
     $("#timeblock17").addClass("future");
 };
-}
+//this close bracket was shown in the tutorial but it's showing as an error in the debugger   }
 
 $("#save-delete9").on("click", "i.fa-trash", function () {
     localStorage.removeItem("hour9");
@@ -147,3 +147,24 @@ $("save-delete12").on("click", "i.fa-trash", function () {
     localStorage.removeItem("hour12");
     $("eventblock12").val("");
 })
+$("save-delete13").on("click", "i.fa-trash", function () {
+    localStorage.removeItem("hour13");
+    $("eventblock13").val("");
+})
+$("save-delete14").on("click", "i-fa-trash", function () {
+    localStorage.removeItem("hour14");
+    $("eventblock14").val("");
+})
+$("#save-delete15").on("click", "i.fa-trash", function (){
+    localStorage.removeItem("hour15");
+    $("eventblock15").val("");
+})
+$("#save-delete16").on("click", "i.fa-trash", function () {
+    localStorage.removeItem("hour16");
+    $("eventblock16").val("");
+})
+$("save-delete17").on("click", "i.fa-trash", function (){
+    localStorage.removeItem("hour17");
+    $("eventblock17").val("");
+})
+
