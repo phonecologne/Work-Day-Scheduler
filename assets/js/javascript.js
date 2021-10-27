@@ -1,6 +1,5 @@
 var currentDay = moment().format("dddd, MMM Do");
 
-// setting up the time blocks for the working hours of 9am to 6pm
 var hour9 = moment().hour(9);
 var hour10 = moment().hour(10);
 var hour11 = moment().hour(11);
@@ -12,7 +11,6 @@ var hour16 = moment().hour(16);
 var hour17 = moment().hour(17);
 var hour18 = moment().hour(18);
 
-//setting hours 9am to 6pm
 var hours = [hour9, hour10, hour11, hour12, hour13, hour14, hour15, hour16, hour17, hour18]
 
 var events9 = JSON.parse(localStorage.getItem('hour9')) || "";
@@ -129,7 +127,6 @@ else if (moment().isAfter(hour18)) {
 else {
     $("#timeblock17").addClass("future");
 };
-//this close bracket was shown in the tutorial but it's showing as an error in the debugger   }
 
 $("#save-delete9").on("click", "i.fa-trash", function () {
     localStorage.removeItem("hour9");
@@ -210,6 +207,5 @@ setInterval(function () {
         auditTime(el);
     });
 }, (1000*60))
-// 1000ms x 60 = 1 minute x 30 = 30 minutes
 
 auditTime();
